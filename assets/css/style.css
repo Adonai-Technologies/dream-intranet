@@ -256,3 +256,99 @@ footer {
         font-size: 1.6rem;
     }
 }
+
+/* ===========================
+   Dark Mode Styles
+=========================== */
+body.dark-mode {
+    background-color: #121212;
+    color: #f1f1f1;
+}
+
+body.dark-mode header {
+    background: #1e1e1e;
+    border-bottom: 1px solid #333;
+}
+
+body.dark-mode nav ul li a {
+    color: #f1f1f1;
+}
+
+body.dark-mode .theme-toggle button {
+    background: #333;
+    color: #fff;
+}
+
+body.dark-mode .hero {
+    background: linear-gradient(135deg, #222, #444);
+    color: #f1f1f1;
+}
+
+body.dark-mode .team-card,
+body.dark-mode .link-card,
+body.dark-mode .event-card {
+    background: #1f1f1f;
+    color: #f1f1f1;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.1);
+}
+
+body.dark-mode footer {
+    background: #1e1e1e;
+    color: #ccc;
+}
+
+body.dark-mode .widget-clock,
+body.dark-mode .widget-weather {
+    background: rgba(255,255,255,0.05);
+}
+.carousel-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 10;
+}
+
+.carousel-btn.prev {
+    left: 10px;
+}
+
+.carousel-btn.next {
+    right: 10px;
+}
+
+.carousel-indicators {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.carousel-indicators .dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin: 0 4px;
+    background: #ccc;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.carousel-indicators .dot.active {
+    background: #0077cc;
+}
+.carousel-container {
+    display: flex;
+    transition: transform 0.3s ease;
+    will-change: transform;
+}
