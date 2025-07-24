@@ -30,7 +30,7 @@
             <button id="darkModeToggle" aria-label="Toggle Dark Mode">🌙</button>
         </div>
     </header>
-
+      <main class="content">
     <!-- HERO SECTION -->
     <section class="hero">
         <h2>Welcome to Your Digital Workspace</h2>
@@ -168,5 +168,51 @@
     <script src="assets/js/widgets.js"></script>
     <script src="assets/js/carousel.js"></script>
     <script src="assets/js/main.js"></script>
+    <!-- Sticky Sidebar -->
+<aside class="sidebar">
+    <div class="sidebar-toggle">&#9776;</div>
+    <div class="sidebar-content" id="sidebar-widgets">
+        <div class="widget widget-clock" draggable="true">
+            <h3>Clock</h3>
+            <p id="clock">--:--:--</p>
+        </div>
+        <div class="widget widget-weather" draggable="true">
+            <h3>Weather</h3>
+            <p id="weather">Loading...</p>
+        </div>
+        <div class="widget widget-notifications" draggable="true">
+            <h3>Notifications</h3>
+            <ul id="notifications-list">
+                <li>Loading...</li>
+            </ul>
+        </div>
+    </div>
+</aside>
+    <script>
+        // Dark Mode Toggle
+        document.getElementById('darkModeToggle').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+        });
+
+        // Sticky Sidebar
+        const sidebar = document.querySelector('.sidebar');
+        const sidebarToggle = document.querySelector('.sidebar-toggle');
+
+        sidebarToggle.addEventListener('click', () => {
+            sidebar.classList.toggle('active');
+        });
+
+        // Drag and Drop for Widgets
+        const widgets = document.querySelectorAll('.widget');
+        widgets.forEach(widget => {
+            widget.addEventListener('dragstart', () => {
+                widget.classList.add('dragging');
+            });
+            widget.addEventListener('dragend', () => {
+                widget.classList.remove('dragging');
+            });
+        });
+    </script>
+</main>
 </body>
 </html>
