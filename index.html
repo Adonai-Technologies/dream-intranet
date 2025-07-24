@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OfficeSpace Intranet</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="logo">OfficeSpace</div>
+    <nav>
+      <ul>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#resources">Resources</a></li>
+      </ul>
+    </nav>
+    <div class="header-right">
+      <span id="clock"></span>
+      <button id="darkModeToggle"><i class="fas fa-moon"></i></button>
+    </div>
+    
+  </header>
+
+  <section class="hero">
+    <h1>Welcome to Your Digital Workspace</h1>
+    <p id="greeting"></p>
+    <div class="quick-links">
+      <a href="#">HR Portal</a>
+      <a href="#">IT Support</a>
+      <a href="#">Policies</a>
+    </div>
+  </section>
+
+  <section id="events" class="widget">
+    <h2>Upcoming Events</h2>
+    <ul id="eventList"></ul>
+  </section>
+
+  <section id="team" class="widget">
+    <h2>Team Spotlight</h2>
+    <div class="team-grid" id="teamGrid"></div>
+  </section>
+
+  <!-- <section id="resources" class="widget">
+    <h2>Useful Resources</h2>
+    <ul>
+      <li><a href="#">Employee Handbook</a></li>
+      <li><a href="#">Benefits Info</a></li>
+      <li><a href="#">Project Management</a></li>
+    </ul>
+
+  </section> -->
+
+  <section id="resources" class="widget">
+  <h2>📂 Useful Resources</h2>
+  <input type="text" id="searchBar" placeholder="Search resources..." />
+  <ul id="resourceList">
+    <li><a href="#">Employee Handbook</a></li>
+    <li><a href="#">Benefits Info</a></li>
+    <li><a href="#">Project Management</a></li>
+    <li><a href="#">Training Materials</a></li>
+    <li><a href="#">Company Policies</a></li>
+  </ul>
+</section>
+
+
+  <footer>
+    <p>&copy; 2025 OfficeSpace | Contact: hr@officespace.com</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
