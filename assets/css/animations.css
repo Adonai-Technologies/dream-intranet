@@ -1,0 +1,96 @@
+/* ===========================
+   Animations & Transitions
+=========================== */
+
+/* Apply animation styles only if JS is enabled */
+.js-enabled .fade-in,
+.js-enabled .slide-in-left,
+.js-enabled .slide-in-right,
+.js-enabled .zoom-in {
+    opacity: 0;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+/* Fade-in animation */
+.js-enabled .fade-in {
+    transform: translateY(20px);
+}
+.js-enabled .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Slide-in from left */
+.js-enabled .slide-in-left {
+    transform: translateX(-40px);
+}
+.js-enabled .slide-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Slide-in from right */
+.js-enabled .slide-in-right {
+    transform: translateX(40px);
+}
+.js-enabled .slide-in-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Zoom-in effect */
+.js-enabled .zoom-in {
+    transform: scale(0.9);
+}
+.js-enabled .zoom-in.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Hover effect for cards */
+.team-card,
+.link-card,
+.event-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-card:hover,
+.link-card:hover,
+.event-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Hero section text animation */
+.hero h2,
+.hero p {
+    animation: fadeUp 1.2s ease forwards;
+}
+
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Loading effect for widgets */
+.widget-clock,
+.widget-weather {
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 0.6; }
+    50% { opacity: 1; }
+    100% { opacity: 0.6; }
+}
+
+/* Loading effect for clock widget */
+.widget-clock {
+    animation-name: clockPulse;
+}

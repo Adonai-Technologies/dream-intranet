@@ -1,77 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>OfficeSpace Intranet</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dream Intranet Hub</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/animations.css">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <div class="logo">OfficeSpace</div>
-    <nav>
-      <ul>
-        <li><a href="#events">Events</a></li>
-        <li><a href="#team">Team</a></li>
-        <li><a href="#resources">Resources</a></li>
-      </ul>
-    </nav>
-    <div class="header-right">
-      <span id="clock"></span>
-      <button id="darkModeToggle"><i class="fas fa-moon"></i></button>
-    </div>
-    
-  </header>
+    <!-- HEADER -->
+    <header>
+        <div class="logo">
+            <img src="assets/img/logo.png" alt="Company Logo">
+            <h1>Dream Intranet</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#team">Team</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#resources">Resources</a></li>
+            </ul>
+        </nav>
+        <div class="theme-toggle">
+            <button id="darkModeToggle" aria-label="Toggle Dark Mode">🌙</button>
+        </div>
+    </header>
 
-  <section class="hero">
-    <h1>Welcome to Your Digital Workspace</h1>
-    <p id="greeting"></p>
-    <div class="quick-links">
-      <a href="#">HR Portal</a>
-      <a href="#">IT Support</a>
-      <a href="#">Policies</a>
-    </div>
-  </section>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h2>Welcome to Your Digital Workspace</h2>
+        <p>Stay connected. Stay informed. Stay productive.</p>
+        <div id="clock" class="widget-clock">Loading time...</div>
+        <div id="weather" class="widget-weather">Loading weather...</div>
+    </section>
 
-  <section id="events" class="widget">
-    <h2>Upcoming Events</h2>
-    <ul id="eventList"></ul>
-  </section>
+    <!-- TEAM SPOTLIGHT -->
+    <section id="team" class="team-spotlight">
+        <h2>Meet Our Team</h2>
+        <div class="team-grid">
+            <div class="team-card">
+                <img src="assets/img/team/member1.jpg" alt="John Doe">
+                <h3>John Doe</h3>
+                <p>CEO</p>
+                <button class="view-profile">View Profile</button>
+            </div>
+            <div class="team-card">
+                <img src="assets/img/team/member2.jpg" alt="Jane Smith">
+                <h3>Jane Smith</h3>
+                <p>Head of Marketing</p>
+                <button class="view-profile">View Profile</button>
+            </div>
+            <div class="team-card">
+                <img src="assets/img/team/member3.jpg" alt="Mark Taylor">
+                <h3>Mark Taylor</h3>
+                <p>Lead Developer</p>
+                <button class="view-profile">View Profile</button>
+            </div>
+            <div class="team-card">
+                <img src="assets/img/team/member4.jpg" alt="Sarah Lee">
+                <h3>Sarah Lee</h3>
+                <p>UX Designer</p>
+                <button class="view-profile">View Profile</button>
+            </div>
+        </div>
+    </section>
 
-  <section id="team" class="widget">
-    <h2>Team Spotlight</h2>
-    <div class="team-grid" id="teamGrid"></div>
-  </section>
+    <!-- UPCOMING EVENTS -->
+    <section id="events" class="upcoming-events">
+        <h2>Upcoming Events</h2>
+        <div class="carousel-container">
+            <div class="event-card">
+                <h3>Monthly Townhall</h3>
+                <p>Date: Jan 30, 2025</p>
+                <p>Join us for updates and team Q&A.</p>
+            </div>
+            <div class="event-card">
+                <h3>Design Thinking Workshop</h3>
+                <p>Date: Feb 10, 2025</p>
+                <p>Learn how to innovate collaboratively.</p>
+            </div>
+            <div class="event-card">
+                <h3>Annual Hackathon</h3>
+                <p>Date: Mar 15, 2025</p>
+                <p>Build amazing projects and win prizes!</p>
+            </div>
+        </div>
+    </section>
 
-  <!-- <section id="resources" class="widget">
-    <h2>Useful Resources</h2>
-    <ul>
-      <li><a href="#">Employee Handbook</a></li>
-      <li><a href="#">Benefits Info</a></li>
-      <li><a href="#">Project Management</a></li>
-    </ul>
+    <!-- QUICK LINKS -->
+    <section id="resources" class="quick-links">
+        <h2>Quick Links</h2>
+        <div class="links-grid">
+            <div class="link-card">
+                <img src="assets/img/icons/hr.png" alt="HR">
+                <h3>HR Portal</h3>
+                <p>Manage leaves, benefits & more.</p>
+                <a href="#">Go to HR</a>
+            </div>
+            <div class="link-card">
+                <img src="assets/img/icons/it.png" alt="IT Helpdesk">
+                <h3>IT Helpdesk</h3>
+                <p>Get technical support instantly.</p>
+                <a href="#">Contact IT</a>
+            </div>
+            <div class="link-card">
+                <img src="assets/img/icons/projects.png" alt="Projects">
+                <h3>Project Management</h3>
+                <p>Track progress and collaborate.</p>
+                <a href="#">View Projects</a>
+            </div>
+            <div class="link-card">
+                <img src="assets/img/icons/policies.png" alt="Policies">
+                <h3>Company Policies</h3>
+                <p>Access all company guidelines.</p>
+                <a href="#">Read Policies</a>
+            </div>
+        </div>
+    </section>
 
-  </section> -->
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2025 Dream Intranet Hub. All Rights Reserved.</p>
+    </footer>
 
-  <section id="resources" class="widget">
-  <h2>📂 Useful Resources</h2>
-  <input type="text" id="searchBar" placeholder="Search resources..." />
-  <ul id="resourceList">
-    <li><a href="#">Employee Handbook</a></li>
-    <li><a href="#">Benefits Info</a></li>
-    <li><a href="#">Project Management</a></li>
-    <li><a href="#">Training Materials</a></li>
-    <li><a href="#">Company Policies</a></li>
-  </ul>
-</section>
-
-
-  <footer>
-    <p>&copy; 2025 OfficeSpace | Contact: hr@officespace.com</p>
-  </footer>
-
-  <script src="script.js"></script>
+    <!-- SCRIPTS -->
+    <script src="assets/js/widgets.js"></script>
+    <script src="assets/js/carousel.js"></script>
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
